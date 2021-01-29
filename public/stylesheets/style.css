@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400;1,700&display=swap');
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /** Reset para REMS - 62.5% = 10px de 16px **/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+navbar-dark{
+     background-color: #000;    
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/** Botones **/
+
+
+
+/** Font de las letras **/
+.font-potta-one{
+    font-family: 'Potta One', cursive;
+    font-style: italic;
+    font-size: 8rem;
+}
+.font-potta-wait{
+    font-family: 'Cambria';
+    font-size: 4rem;
+    padding: 0;
+    margin: 0;
+}
+
+.font-lato{
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-size: 2.6rem;
+}
+
+/** Mangenes del body **/
+.margin-confi{
+    margin-top: 0rem;
+}
+.margin-oks{
+    margin-top: 0.2rem;
+}
+.margin-otakusong{
+    margin-top: 2rem;
+}
+.separar-boton-titulo{
+    margin-top: 3rem;
+}
+
+/** Tamaño de imagenes **/
+.tamañoCaritaPerfil{
+  
+}
+
+/** footer **/
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+
+  }
+
+
+.copyright {
+    margin: 0;
+    color: #ffffff;
+}
+
+
+/** Fondo de toda la pagina **/
+.bg-fondo{
+    background-image: url(../images/otaku.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+/** Fondo negro de una parte de la pagina **/
+.fondo-negro {
+    color: #ffffffdc;
+    background-color: #000000a8;
+    padding: 0 2rem;
+    margin-top: 2rem;
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    height: 220px;
+    /** = 1200px; **/
+    margin: 0 auto;
+}
+
+/* estilos de validacion */
+
+.is-invalid{
+    border-color: #c81414;
+    border-width: 1.5px;
+}
+.invalid-feedback{
+    margin-top: 8px;
+    display: block;
+    color: red;
+    background-color: #000000b2;
+    font-style: italic;
+}
+.none{
+    display: none;
+}

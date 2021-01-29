@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  header(style=' background-color: #000;')
+    nav.navbar.navbar-dark.d-flex.justify-content-end
+      button.btn.btn-warning(style='border-radius: 5px;') Configuracion
+  main
+    .container
+      .row.margin-confi
+        .col-md-0.offset-md-0
+          ol.breadcrumb.bg-transparent
+            li
+              a(href='/')
+                button.btn.btn-warning(style='border-radius: 5px;') Home
+            li.active
+              a(href='/lestgo')
+                button.btn.btn-warning(style=' background-color: #fbdb65; border-radius: 5px;') Profile
+      .row.margin-oks
+        .col-md-4.offset-md-4
+          h1.font-potta-one(style='color: #fff') OKS
+      .row.my-2
+        .col-md-4.offset-md-4
+          h2.font-lato(style='color: #fff')  OtakuSong 
+      .row.separar-boton-titulo
+        .col-md-4.offset-md-4
+          .btn-group-vertical.d-block.contenedor.fondo-negro
+            form(action='/game' method='post')
+              .form-group
+                label.font-potta-wait(for='nombreUsuario' style='color: #FFBA5C;') Wait!
+                small#nameHelp.form-text.text-muted  Before you start, enter a username for your profile.
+                input#nombreUsuario.form-control.form-control-lg(type='name' name='nombreUsuario' aria-describedby='nameHelp' placeholder='Enter name')
+              input#btnReproducir.btn.btn-dark.btn-block.my-2.font-lato(type='submit' value='GO!' style='color: #FFBA5C; background-color: #000; border-radius: 15px;')
+
+  // comienzo del footer
+  footer.p-4(style='background-color: #000;')
+    .container
+      p.copyright(tabindex='0 ') OtakuSongs
+      p.copyright(tabindex='0 ') Todos los Derechos Reservados 2021 &copy; 
+  // comienzo de los Scripts
+  script(src='/javascripts/script')

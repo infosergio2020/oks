@@ -1,0 +1,35 @@
+extends ../layout
+
+
+block content
+  header(style=' background-color: #000;')
+    nav.navbar.navbar-dark.d-flex.justify-content-end
+      .hi(style=' height: 40px')
+  main
+    .container
+      .row.margin-confi
+        .col-md-0.offset-md-0
+          a(href='/')
+            button.btn.btn-warning(style='border-radius: 5px;') Home
+      .row.margin-oks
+        .col-md-4.offset-md-4
+          h1.font-potta-one(style='border-radius: 15px; color: #fff') OKS
+      .row.my-2
+        .col-md-4.offset-md-4
+          h2.font-lato(style='border-radius: 15px; color: #fff')  Creacion de nuevo usuario
+      .row
+        .col-md-4.offset-md-4
+          form(action="/admin/create_user", method="post")
+            .form-group
+              label#nombre.font-lato(style='color: #fff') Nombre
+              input#nombre.form-control(type="text" name='nombre' style='background: #e3e3e3; border-radius: 15px;' value=usuario.nombre class=errors ? '' : 'is-invalid')
+              .hola(class=errors ? 'none' : 'invalid-feedback')
+                | this user already exists
+            button.btn.btn-warning.font-lato(type="submit") Crear usuario
+          
+            
+  // comienzo del footer
+  footer.p-2(style='background-color: #000;')
+    .container
+      p.copyright(tabindex='0 ') OtakuSongs
+      p.copyright(tabindex='0 ') Todos los Derechos Reservados 2021 &copy; 

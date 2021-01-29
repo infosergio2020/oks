@@ -1,0 +1,35 @@
+extends ../layout
+
+block content
+  header(style=' background-color: #000;')
+    nav.navbar.navbar-dark.d-flex.justify-content-end
+      .hi(style=' height: 40px')
+  main
+    .container
+      .row.margin-confi
+        .col-md-0.offset-md-0
+          a(href='/')
+            button.btn.btn-warning(style='border-radius: 5px;') Home
+      .row.margin-oks
+        .col-md-4.offset-md-4
+          h1.font-potta-one(style='border-radius: 15px; color: #fff') OKS
+      .row.my-2
+        .col-md-4.offset-md-4
+          h2.font-lato(style='border-radius: 15px; color: #fff')  MainBoard 
+      .row.separar-boton-titulo
+        .col-md-4.offset-md-4
+          .btn-group-vertical.d-block.mx-2
+            a(href='/admin/create_user' style = 'text-decoration:none;')
+              button.btn.btn-warning.btn-block.my-2.font-lato Create user
+            a(href='/admin/users' style = 'text-decoration:none;')
+              button.btn.btn-warning.btn-lg.btn-block.my-2.font-lato List users
+            a(href='/admin/create_song' style = 'text-decoration:none;')
+              button.btn.btn-warning.btn-lg.btn-block.my-2.font-lato Add ♪♫
+            a(href='/admin/songs' style = 'text-decoration:none;')
+              button.btn.btn-warning.btn-lg.btn-block.my-2.font-lato List ♪♫
+            
+  // comienzo del footer
+  footer.p-2(style='background-color: #000;')
+    .container
+      p.copyright(tabindex='0 ') OtakuSongs
+      p.copyright(tabindex='0 ') Todos los Derechos Reservados 2021 &copy; 
