@@ -1,8 +1,8 @@
-var Usuario = require('../models/usuario');
+var Cancion = require('../models/cancion');
 
 module.exports = {
     list: function(req,res,next) {
-        Usuario.find({},(err,usuarios)=>{
+        Cancion.find({},(err,usuarios)=>{
             res.render('admin/users',{usuarios:usuarios});
         });
     },

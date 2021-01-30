@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var usuarioController = require('../controllers/usuario');
+var songController = require('../controllers/cancion');
 
 /* GET home page. */
 //redirecciona al tablero principal del admin
@@ -10,14 +11,23 @@ router.get('/', function(req, res, next) { res.render('admin/index', { title: 'M
 router.get('/create_user', usuarioController.create_get);
 router.post('/create_user', usuarioController.create_post);
 //redirecciona al fomulario de actualizacion de usuario
-router.get('/:id/update', usuarioController.update_get);
-router.post('/:id/update', usuarioController.update_post);
+router.get('/:id/update_user', usuarioController.update_get);
+router.post('/:id/update_user', usuarioController.update_post);
 //redirecciona al borrado de usuario
 router.post('/:id/delete', usuarioController.delete);
-
+//listado de todos los usuarios
 router.get('/users', usuarioController.list);
 
-router.get('/create_song', function(req, res, next) { res.render('admin/create_song', { title: 'Agregar cancion' }) });
-router.get('/songs', function(req, res, next) { res.render('admin/songs', { title: 'Lista de canciones' }) });
+
+//redirecciona al fomulario de creacion de cancion
+router.get('/create_song', songController.create_get);
+router.post('/create_song', songController.create_post);
+//redirecciona al fomulario de actualizacion de cancion
+router.get('/:id/update_song', songController.update_get);
+router.post('/:id/update_song', songController.update_post);
+//redirecciona al borrado de cancion
+router.post('/:id/delete', songController.delete);
+//listado de todos los canciones
+router.get('/songs', songController.list);
 
 module.exports = router;
