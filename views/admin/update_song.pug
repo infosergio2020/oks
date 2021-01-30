@@ -19,7 +19,7 @@ block content
           h2.font-lato(style='border-radius: 15px; color: #fff')  Update song
       .row
         .col-md-4.offset-md-4
-          form(action=`/admin/${cancion.id}/update_user`, method="post")
+          form(action=`/admin/${cancion.id}/update_song`, method="post")
             .form-group
               label#nombre.font-lato(style='color: #fff') Name
               input#nombre.form-control(type="text" name='nombre' style='background: #e3e3e3; border-radius: 15px;' value=cancion.nombre class=errors ? '' : 'is-invalid')

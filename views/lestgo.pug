@@ -24,13 +24,27 @@ block content
       .row.separar-boton-titulo
         .col-md-4.offset-md-4
           .btn-group-vertical.d-block.contenedor.fondo-negro
-            form(action='/game' method='post')
+            form(#newGame action='/lestgo' method='post')
               .form-group
                 label.font-potta-wait(for='nombreUsuario' style='color: #FFBA5C;') Wait!
-                small#nameHelp.form-text.text-muted  Before you start, enter a username for your profile.
-                input#nombreUsuario.form-control.form-control-lg(type='name' name='nombreUsuario' aria-describedby='nameHelp' placeholder='Enter name')
-              input#btnReproducir.btn.btn-dark.btn-block.my-2.font-lato(type='submit' value='GO!' style='color: #FFBA5C; background-color: #000; border-radius: 15px;')
+                small#nameHelp.form-text.text-muted  Before you start, enter you username for your profile.
+                input#nombre.form-control(type="text" name='nombre' style='background: #e3e3e3; border-radius: 15px;' value=usuario.nombre class=errors ? '' : 'is-invalid' placeholder='Enter name')
+                .hola(class=errors ? 'none' : 'invalid-feedback')
+                    | this user already exists
+              .btn-group
+                input#btnReproducir.btn.btn-dark.btn-block.my-2.font-lato(type='submit' value='GO!' style='color: #FFBA5C; background-color: #000; border-radius: 15px;')
+                button#continueButton.btn.btn-dark.btn-block.my-2.font-lato(type='button' style='color: #FFBA5C; background-color: #000; border-radius: 15px;') Resume
 
+            form(#continueGame action='/lestgo' method='post' style='display:none')
+              .form-group
+                label.font-potta-wait(for='nombreUsuario' style='color: #FFBA5C; font-size:2.3rem;') Welcome back!
+                small#nameHelp.form-text.text-muted  Before you continue, enter a username .
+                input#nombre.form-control(type="text" name='nombre' style='background: #e3e3e3; border-radius: 15px;' value=usuario.nombre class=errors ? '' : 'is-invalid' placeholder='Enter name')
+                .hola(class=errors ? 'none' : 'invalid-feedback')
+                    | this user already exists
+              .btn-group
+                input#btnReproducir.btn.btn-dark.btn-block.my-2.font-lato(type='submit' value='Continue!' style='color: #FFBA5C; background-color: #000; border-radius: 15px;')
+                button#backButton.btn.btn-dark.btn-block.my-2.font-lato(type='button' style='color: #FFBA5C; background-color: #000; border-radius: 15px;') Back
   // comienzo del footer
   footer.p-4(style='background-color: #000;')
     .container

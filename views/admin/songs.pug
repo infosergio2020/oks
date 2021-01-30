@@ -36,7 +36,7 @@ block content
                         a(href='/admin/'+cancion.id+'/update_song')
                           button.link-button.btn-secondary  Editar
                       td
-                        form.inline(method='post' action='/admin/'+cancion.id+'/delete')
+                        form.inline(method='post' action='/admin/'+cancion.id+'/delete_song')
                             input(type='hidden' name='id' value=cancion.id)
                             button.link-button.btn-danger(type='submit')='Eliminar'
   // comienzo del footer

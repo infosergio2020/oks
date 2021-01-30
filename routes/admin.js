@@ -26,7 +26,7 @@ router.post('/create_song', songController.create_post);
 router.get('/:id/update_song', songController.update_get);
 router.post('/:id/update_song', songController.update_post);
 //redirecciona al borrado de cancion
-router.post('/:id/delete', songController.delete);
+router.post('/:id/delete_song', songController.delete);
 //listado de todos los canciones
 router.get('/songs', songController.list);
 

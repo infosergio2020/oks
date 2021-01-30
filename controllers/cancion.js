@@ -22,13 +22,17 @@ module.exports = {
         });
     },
     update_get: function( req, res, next ) {
+        console.log(`realizando la busqueda de: ${req.params.id}`);
         Cancion.findById(req.params.id, ( err, cancion )=> {
+            console.log(`se hace encontrado: ${cancion}`);
             res.render('admin/update_song', {errors:{}, cancion:cancion});
         })
     },
     update_post: function( req, res, next ) {
         var update_values = {nombre: req.body.nombre};
-        Usuario.findByIdAndUpdate(req.params.id, update_values, ( err, cancion )=> {
+        console.log(`el id recibido del formulario es: ${req.params.id}`);
+        console.log(`se va a actualizar la siguiente informacion: ${update_values}` );
+        Cancion.findByIdAndUpdate(req.params.id, update_values, ( err, cancion )=> {
             if(err){
                 console.log(err);
                 res.render('admin/update_song', {errors:err.errors, cancion: cancion});
@@ -38,9 +42,10 @@ module.exports = {
         });
     },
     delete: function( req, res, next ){
-        console.log(req.params);
-        Usuario.findByIdAndDelete(req.params.id, ( err ) => {
+        console.log(`los parametros recibidos para eliminar son: ${req.params}`);
+        Cancion.findByIdAndDelete(req.params.id, ( err ) => {
             if(err) {
+                console.log(err);
                 next(err);
             }else{
                 res.redirect('/admin');
