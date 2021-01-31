@@ -21,7 +21,7 @@ module.exports = {
         });
     },
     update_get: function(req, res, next) {
-        console.log(`realizando la busqueda de: ${req.params.id}`);
+        console.log(`realizandos la busqueda de: ${req.params.id}`);
         Cancion.findById(req.params.id, (err, cancion) => {
             console.log(`se hace encontrado: ${cancion}`);
             res.render('admin/update_song', { errors: {}, cancion: cancion });
