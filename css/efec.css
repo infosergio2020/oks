@@ -70,7 +70,11 @@
     -webkit-box-align: center;
     align-items: center;
     background: var(--panel);
+<<<<<<< HEAD
     border: 5px hsla(23, 100%, 50%, 1) solid;
+=======
+    /* border: 5px hsla(23, 100%, 50%, 1) solid; */
+>>>>>>> 3f7bc23aae80d0a95d2ca5568ffdd08eed6be813
     display: -webkit-box;
     display: flex;
     height: calc(var(--size) * 1px);
