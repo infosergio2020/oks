@@ -70,7 +70,7 @@
     -webkit-box-align: center;
     align-items: center;
     background: var(--panel);
-    border: 5px hsl(var(--hue), calc(var(--saturation) * 1%), calc(var(--lightness) * 1%)) solid;
+    /* border: 5px hsla(23, 100%, 50%, 1) solid; */
     display: -webkit-box;
     display: flex;
     height: calc(var(--size) * 1px);
@@ -127,7 +127,7 @@
     50%,
     100% {
         -webkit-transform: rotateX(90deg);
-        transform: rotateX(90deg);
+        transform: rotateX(0deg);
         /** transform: rotateX(0deg);   esto para que le de otro tipo de movimiento**/
     }
 }
