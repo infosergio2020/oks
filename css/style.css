@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400;1,700&display=swap');
-
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -12,8 +11,9 @@ html {
 *:after {
     box-sizing: inherit;
 }
-navbar-dark{
-     background-color: #000;    
+
+navbar-dark {
+    background-color: #000;
 }
 
 body {
@@ -22,49 +22,62 @@ body {
     line-height: 2;
 }
 
+
 /** Botones **/
 
 
-
 /** Font de las letras **/
-.font-potta-one{
+
+.font-potta-one {
     font-family: 'Potta One', cursive;
     font-style: italic;
     font-size: 8rem;
 }
-.font-potta-wait{
+
+.font-potta-wait {
     font-family: 'Cambria';
     font-size: 4rem;
-    padding: 0;
-    margin: 0;
 }
 
-.font-lato{
+.font-lato {
     font-family: 'Lato', sans-serif;
     font-style: italic;
-    font-size: 2.6rem;
+    font-size: 3rem;
 }
+
 
 /** Mangenes del body **/
-.margin-confi{
+
+.margin-confi {
     margin-top: 0rem;
 }
-.margin-oks{
-    margin-top: 0.2rem;
+
+.margin-oks {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
-.margin-otakusong{
-    margin-top: 2rem;
+
+.margin-otakusong {
+    margin-top: 4rem;
 }
-.separar-boton-titulo{
-    margin-top: 3rem;
+
+.separar-boton-titulo {
+    margin-top: 5rem;
 }
+
 
 /** Tamaño de imagenes **/
-.tamañoCaritaPerfil{
-  
+
+
+/** cambiar forma a redondo a la imagen **/
+
+.imgRedonda {
+    border-radius: 150px;
 }
 
+
 /** footer **/
+
 footer {
     position: fixed;
     left: 0;
@@ -72,9 +85,7 @@ footer {
     width: 100%;
     color: white;
     text-align: center;
-
-  }
-
+}
 
 .copyright {
     margin: 0;
@@ -83,13 +94,16 @@ footer {
 
 
 /** Fondo de toda la pagina **/
-.bg-fondo{
-    background-image: url(../images/otaku.jpg);
+
+.bg-fondo {
+    background-image: url(../img/otaku.jpg);
     background-size: cover;
     text-align: center;
 }
 
+
 /** Fondo negro de una parte de la pagina **/
+
 .fondo-negro {
     color: #ffffffdc;
     background-color: #000000a8;
@@ -103,21 +117,4 @@ footer {
     height: 220px;
     /** = 1200px; **/
     margin: 0 auto;
-}
-
-/* estilos de validacion */
-
-.is-invalid{
-    border-color: #c81414;
-    border-width: 1.5px;
-}
-.invalid-feedback{
-    margin-top: 8px;
-    display: block;
-    color: red;
-    background-color: #000000b2;
-    font-style: italic;
-}
-.none{
-    display: none;
 }

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/transicion.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!--Nuestro script, que se encarga de crear el PDF usando la librería-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body class="bg-fondo" id="btnReproducir ">
+    <audio src="gantz.mp3" id="my_audio" loop="loop">
+        
+    </audio>
+    <header style=" background-color: #000;">
+        <nav class="navbar navbar-dark d-flex justify-content-end">
+            <button class="btn btn-warning" style="border-radius: 5px;">Configuracion</button>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row margin-confi">
+                <div class="col-md-0 offset-md-0">
+                    <ol class="breadcrumb bg-transparent ">
+                        <li><a href="index.html"><button class="btn btn-warning" style="border-radius: 5px;">Home</button></a></li>
+                        <li><a href="lestgo.html"><button class="btn btn-warning" style="border-radius: 5px;">Profile</button></a></li>
+                        <li class="active"><a href="#"><button class="btn btn-warning " style=" background-color: #fbdb65; border-radius: 5px;">Game</button></a></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row margin-oks">
+
+                <!--
+                
+                <img img id="trasladar" src="img/caritaPerfil.png" width="100" height="100" alt="imagen de perfil">
+                
+                -->
+
+
+                <img img id="trasladar" class="imgRedonda" src="img/carafeliz.png" width="100" height="100" alt="imagen de perfil">
+
+                <div class="col-md-0 offset-md-4">
+                    <h1 class="font-potta-one" style="color: #fff">OKS</h1>
+                </div>
+            </div>
+
+            <div class="row my-2">
+                <p>
+                    Name: Loli49
+                </p>
+                <div class="col-md-2 offset-md-4">
+
+                    <h2 class="font-lato" style="color: #fff"> OtakuSong </h2>
+                </div>
+            </div>
+
+
+
+
+            <div class="row separar-boton-titulo">
+                <div class="col-md-4 offset-md-4">
+                    <div class="btn-group-vertical d-block">
+
+
+                        <button type="button" class="btn btn-dark btn-lg btn-block my-2 font-lato" style="border-radius: 15px; color: #FFBA5C; background-color: #000;">Bleach</button>
+                        <button type="button" class="btn btn-dark btn-lg btn-block my-2 font-lato" style="border-radius: 15px; color: #FFBA5C; background-color: #000;">One piece</button>
+                        <button type="button" class="btn btn-dark btn-lg btn-block my-2 font-lato" style="border-radius: 15px;color: #FFBA5C; background-color: #000;">Gantz</button>
+                        <button type="button" class="btn btn-dark btn-lg btn-block my-2 font-lato" style="border-radius: 15px; color: #FFBA5C; background-color: #000;">Digimon</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- comienzo del footer-->
+
+    <footer class="p-4" style="background-color: #000;">
+        <div class="container">
+            <p class="copyright " tabindex="0 ">OtakuSongs</p>
+            <p class="copyright " tabindex="0 ">Todos los Derechos Reservados 2021 &copy; </p>
+        </div>
+    </footer>
+    <!-- comienzo de los Scripts-->
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
