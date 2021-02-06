@@ -1,0 +1,92 @@
+/** mover imagen de cara de perfil 1.3 **/
+
+#trasladar {
+    font-size: 50px;
+    line-height: 1.3;
+    position: relative;
+    animation: lol;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes lol {
+    0% {
+        /** transform: rotateY(180deg);**/
+    }
+    100% {
+        top: 20px;
+        transform: translate(100px, 20px) rotate(20deg);
+        transition: transform 300ms ease-in-out;
+    }
+}
+
+
+/** mover imagen de acierto 1.3 **/
+
+#moverimgacierto {
+    font-size: 50px;
+    line-height: 1.3;
+    position: relative;
+    animation: rotar;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotar {
+    0% {
+        top: -100px;
+        transform: rotateY(180deg);
+    }
+    100% {
+        top: 20px;
+        /**
+        transform: translate(300px, 10px) rotate(20deg);
+        transition: transform 300ms ease-in-out;
+        **/
+    }
+}
+
+
+/** mover imagen de falla 1.3 **/
+
+#moverimgfalla {
+    font-size: 50px;
+    line-height: 1.3;
+    position: relative;
+    animation: falla;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes falla {
+    0% {
+        top: -100px;
+        /** transform: rotateY(180deg);**/
+    }
+    100% {
+        top: 20px;
+        /**
+        transform: translate(300px, 10px) rotate(20deg);
+        transition: transform 300ms ease-in-out;
+        **/
+    }
+}
+
+
+/** mover boton great **/
+
+#moverBoton {
+    position: relative;
+    animation-name: content;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes content {
+    0% {
+        left: -1000px;
+    }
+    100% {
+        left: 0;
+    }
+}
