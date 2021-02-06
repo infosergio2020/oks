@@ -14,7 +14,11 @@
     --ease: cubic-bezier(0, 0, 0, 0);
     --bg: #d49307;
     --panel: rgba(7, 7, 7, 0);
+<<<<<<< HEAD
     --color: #ffffff;
+=======
+    --color: #fff;
+>>>>>>> ca478c37b6c6a54b56cfce7ebf8b2a7251edbc09
     --hue: 23;
     --saturation: 100;
     --lightness: 55;
@@ -22,8 +26,8 @@
 
 @media (prefers-color-scheme: dark) {
      :root {
-        --bg: #1a1a1a;
-        --panel: #000;
+        --bg: #a00c0c;
+        --panel: rgb(167, 10, 10);
         --color: #d49307;
     }
 }
@@ -31,11 +35,11 @@
 .scene {
     -webkit-perspective: calc(var(--perspective) * 1px);
     perspective: calc(var(--perspective) * 1px);
+    justify-content: center;
 }
 
 .word {
     display: -webkit-box;
-    display: flex;
     transform: rotateX(0deg) rotateY(45deg);
     transform-style: preserve-3d;
 }
@@ -57,7 +61,11 @@
 .letter {
     color: var(--color);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+<<<<<<< HEAD
     font-size: 5rem;
+=======
+    border-radius: 15px;
+>>>>>>> ca478c37b6c6a54b56cfce7ebf8b2a7251edbc09
     font-weight: bold;
     height: calc(var(--size) * 1px);
     margin-right: calc(var(--size) * 0.2px);
@@ -70,17 +78,14 @@
     -webkit-box-align: center;
     align-items: center;
     background: var(--panel);
-<<<<<<< HEAD
-    border: 5px hsla(23, 100%, 50%, 1) solid;
-=======
-    /* border: 5px hsla(23, 100%, 50%, 1) solid; */
->>>>>>> 3f7bc23aae80d0a95d2ca5568ffdd08eed6be813
-    display: -webkit-box;
+    <<<<<<< HEAD border: 5px hsla(23, 100%, 50%, 1) solid;
+    =======/* border: 5px hsla(23, 100%, 50%, 1) solid; */
+    >>>>>>>3f7bc23aae80d0a95d2ca5568ffdd08eed6be813 display: -webkit-box;
     display: flex;
     height: calc(var(--size) * 1px);
     -webkit-box-pack: center;
     justify-content: center;
-    left: 200%;
+    left: 50%;
     /** con este lo corri mas al centro juajua **/
     position: absolute;
     top: 50%;
