@@ -17,5 +17,4 @@
 
 setTimeout(function() {
     document.getElementById("my_audio").play();
-
 }, 1000)
