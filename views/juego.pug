@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  header(style=' background-color: #000;')
+    nav.navbar.navbar-dark.d-flex.justify-content-end
+      .hi(style=' height: 40px')
+  main
+    .container
+      .row.margin-confi
+        .col-md-0.offset-md-0
+          a(href='/')
+            button.link-button.btn-warning.px-5 back
+      .row.margin-oks
+        .col-md-4.offset-md-4
+          h1.font-potta-one(style='border-radius: 15px; color: #fff') OKS
+      .row.my-2
+        .col-md-4.offset-md-4
+          h2.font-lato(style='border-radius: 15px; color: #fff')  Song register
+      .row
+        .col-md-4.offset-md-3
+          audio(controls='')
+            source(src='/'+url type='audio/mpeg')
+            |   Your browser does not support the audio tag.
+          .table-responsive-md
+            table.table.table-striped.table-dark
+              thead
+                tr
+                  th(scope='col') BOTONES
+              tbody
+                each cancion in canciones
+                    tr
+                      td= cancion.title      
+  // comienzo del footer
+  footer.p-2(style='background-color: #000;')
+    .container
+      p.copyright(tabindex='0 ') OtakuSongs
+      p.copyright(tabindex='0 ') Todos los Derechos Reservados 2021 &copy;

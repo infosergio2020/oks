@@ -31,5 +31,7 @@ router.post('/:id/delete_song', songController.delete);
 //listado de todos los canciones
 router.get('/songs', songController.list);
 router.get('/:id/play', songController.play);
+//probando funcion para el juego
+router.get('/juego', songController.list_3_canciones);
 
 module.exports = router;

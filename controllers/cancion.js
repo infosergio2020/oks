@@ -5,18 +5,28 @@ var Cancion = require('../models/cancion');
 var path = require ('path');
 var fs = require( 'fs-extra');
 
+const random =  (min, max) => {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
 
 module.exports = {
+    //este controlador es para la parte del juego
+    list_3_canciones: async function(req, res, next) {
+        const canciones = await Cancion.aggregate([ { $sample: { size: 3 } } ] );
+        indice = random(0,3);
+        res.render('juego',{ canciones:canciones, url:canciones[indice].imagePath});
+    },
+    //este controlador es para la parte del admin (comprobar reproduccion de canciones)
     play: async function(req, res, next) {
         const { id } = req.params;
         song =  await Cancion.findById(id);
-        console.log(song.imagePath);
         res.render('admin/playSong',{ cancion:song });
     },
+    //este controlador es para que el admin pueda listar el contenido de canciones que subió
     list: async function(req, res, next) {
         const canciones = await Cancion.find();
-        res.render('admin/songs',{ canciones:canciones });
-
+        res.render('admin/songs',{ canciones:canciones});
     },
     create_get: function(req, res, next) {
         res.render('admin/create_song', { title: 'Agregar cancion', errors: {}, cancion: new Cancion() });
