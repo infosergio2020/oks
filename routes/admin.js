@@ -3,6 +3,7 @@ var router = express.Router();
 
 var usuarioController = require('../controllers/usuario');
 var songController = require('../controllers/cancion');
+var multer = require('../controllers/multer')
 
 /* GET home page. */
 //redirecciona al tablero principal del admin
@@ -21,7 +22,7 @@ router.get('/users', usuarioController.list);
 
 //redirecciona al fomulario de creacion de cancion
 router.get('/create_song', songController.create_get);
-router.post('/create_song', songController.create_post);
+router.post('/create_song', multer.single('song'),songController.create_post);
 //redirecciona al fomulario de actualizacion de cancion
 router.get('/:id/update_song', songController.update_get);
 router.post('/:id/update_song', songController.update_post);
@@ -29,5 +30,6 @@ router.post('/:id/update_song', songController.update_post);
 router.post('/:id/delete_song', songController.delete);
 //listado de todos los canciones
 router.get('/songs', songController.list);
+router.get('/:id/play', songController.play);
 
 module.exports = router;

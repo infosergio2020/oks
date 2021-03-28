@@ -6,9 +6,7 @@ var logger = require('morgan');
 require('./controllers/connection');
 
 //Enrutadores
-var gameRouter = require('./routes/games');
 var indexRouter = require('./routes/index');
-var lestgoRouter = require('./routes/lestgo');
 var adminRouter = require('./routes/admin');
 
 var app = express();
@@ -22,11 +20,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/uploads', express.static(__dirname + '/uploads'));
 
 //Rutas de direccionamiento
 app.use('/', indexRouter);
-app.use('/lestgo', lestgoRouter);
-app.use('/game', gameRouter);
 app.use('/admin', adminRouter);
 
 // CRUD'S

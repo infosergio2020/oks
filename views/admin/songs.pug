@@ -25,13 +25,16 @@ block content
                 tr
                   th(scope='col') id
                   th(scope='col') name
+                  th(scope='col') URL
+                  th(scope='col') 
                   th(scope='col') 
                   th(scope='col') 
               tbody
                 each cancion in canciones
                     tr
-                      td(scope='row')= cancion.id
-                      td= cancion.nombre
+                      td(scope='row')= cancion._id
+                      td= cancion.title 
+                      td= cancion.imagePath
                       td
                         a(href='/admin/'+cancion.id+'/update_song')
                           button.link-button.btn-secondary  Editar
@@ -39,6 +42,9 @@ block content
                         form.inline(method='post' action='/admin/'+cancion.id+'/delete_song')
                             input(type='hidden' name='id' value=cancion.id)
                             button.link-button.btn-danger(type='submit')='Eliminar'
+                      td
+                        a(href='/admin/'+cancion.id+'/play')
+                          button.link-button.btn-success  Reproducir
   // comienzo del footer
   footer.p-2(style='background-color: #000;')
     .container

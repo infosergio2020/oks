@@ -19,13 +19,14 @@ block content
           h2.font-lato(style='border-radius: 15px; color: #fff')  Add new song
       .row
         .col-md-4.offset-md-4
-          form(action="/admin/create_song", method="post")
+          form( action='/admin/create_song' enctype='multipart/form-data' method='POST' )
             .form-group
-              label#nombre.font-lato(style='color: #fff') Name
-              input#nombre.form-control(type="text" name='nombre' style='background: #e3e3e3; border-radius: 15px;' value=cancion.nombre class=errors ? '' : 'is-invalid')
-              .hola(class=errors ? 'none' : 'invalid-feedback')
-                | this song already exists
+              label.font-lato(style='color: #fff') Name
+              input.form-control(type='text' name='name' style='background: #e3e3e3; border-radius: 15px;')
+            .form-group
+              input.form-control-file(type='file' name='song' style='color: #fff; background-color:black;')
             button.btn.btn-warning.font-lato(type="submit") Add song
+          
           
             
   // comienzo del footer
