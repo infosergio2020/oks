@@ -17,19 +17,17 @@ block content
         .col-md-4.offset-md-4
           h2.font-lato(style='border-radius: 15px; color: #fff')  Song register
       .row
-        .col-md-4.offset-md-3
+        .col-md-6.offset-md-3
           audio(controls='')
-            source(src='/'+url type='audio/mpeg')
+            source(src='/'+cancionCorrecta.imagePath+'#t=20,40' type='audio/mpeg')
             |   Your browser does not support the audio tag.
+          button.btn-btn-danger(style="display:none" name="boton_solucion" value=cancionCorrecta.title) RESPUESTA
           .table-responsive-md
-            table.table.table-striped.table-dark
-              thead
-                tr
-                  th(scope='col') BOTONES
-              tbody
                 each cancion in canciones
                     tr
-                      td= cancion.title      
+                      td
+                        button.btn.btn-dark.btn-lg.btn-block.my-2.font-lato(type='button' name="boton_opcion" value=cancion.title style='color: #FFBA5C; background-color: #000;') #{cancion.title}
+
   // comienzo del footer
   footer.p-2(style='background-color: #000;')
     .container

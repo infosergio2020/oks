@@ -13,9 +13,9 @@ const random =  (min, max) => {
 module.exports = {
     //este controlador es para la parte del juego
     list_3_canciones: async function(req, res, next) {
-        const canciones = await Cancion.aggregate([ { $sample: { size: 3 } } ] );
-        indice = random(0,3);
-        res.render('juego',{ canciones:canciones, url:canciones[indice].imagePath});
+        const canciones = await Cancion.aggregate([ { $sample: { size: 4 } } ] );
+        indice = random(0,4);
+        res.render('juego',{ canciones:canciones, cancionCorrecta:canciones[indice] });
     },
     //este controlador es para la parte del admin (comprobar reproduccion de canciones)
     play: async function(req, res, next) {
@@ -42,10 +42,11 @@ module.exports = {
         // necesito crear un objeto documento de mongodb 
         const song = new Cancion(newSong);
         await song.save()
-        return res.json({
-            message:'Photo seccessfully saved',
-            song
-        })
+        // return res.json({
+        //     message:'Photo seccessfully saved',
+        //     song
+        // })
+        return res.redirect('/')
     },
     update_get: function(req, res, next) {
         Cancion.findById(req.params.id, (err, cancion) => {
