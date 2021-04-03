@@ -8,5 +8,6 @@ var songController = require('../controllers/cancion');
 router.get('/', function(req, res, next) { res.render('index', { title: 'Main' }) });
 
 router.get('/game',songController.list_3_canciones);
+router.get('/newRound',songController.list_3_canciones_nuevas);
 
 module.exports = router;

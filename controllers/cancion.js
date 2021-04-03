@@ -12,6 +12,11 @@ const random =  (min, max) => {
 
 module.exports = {
     //este controlador es para la parte del juego
+    list_3_canciones_nuevas: async function(req, res, next) {
+        const canciones = await Cancion.aggregate([ { $sample: { size: 4 } } ] );
+        indice = random(0,4);
+        res.json(canciones);
+    },
     list_3_canciones: async function(req, res, next) {
         const canciones = await Cancion.aggregate([ { $sample: { size: 4 } } ] );
         indice = random(0,4);
